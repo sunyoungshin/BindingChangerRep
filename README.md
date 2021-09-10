@@ -55,7 +55,7 @@ The random sequence pairs are generated with R codes in `2.Alternative model inp
 The sequence pairs are generated with R codes in `3.Sensitivity and Specificity input.R` and they are saved
 in `3.Sensitivity and Specificity input.Rdata`.
 
-### Subdirectory `FIMO SS` 
+### Subdirectory FIMO SS
 The input of FIMO are generated with R codes in `generate fimo fasta.R` and they are saved in the directory. 
 There are three subdirectories in this directory. Each is for the corresponding motif. The inputs .fasta and .txt for the motif are 
 saved in the subdirectory.
@@ -81,10 +81,10 @@ The directory `Leukemia` is for leukemia InDel analysis.
 **1.2** We select the top 3 motifs for our analysis and saved the motifs in `MYC motif.Rdata`. 
 
 ### 2. Binding changer analysis
-2.1 The model parameters for leukemia InDel analysis were obtained with R codes in `leukemia model parameter.R` and they are saved in `leukemia parameters.Rdata`.
+**2.1** The model parameters for leukemia InDel analysis were obtained with R codes in `leukemia model parameter.R` and they are saved in `leukemia parameters.Rdata`.
 The input R object _lek_seq_info_ of the BC test are generated with R codes in `leukemia indel seq.R`.
 
-2.2 `leukemia test & plots.R` ran the BC test and produced Table E9 & E10 and Figure 6. 
+**2.2** `leukemia test & plots.R` ran the BC test and produced Table E9 & E10 and Figure 6. 
 
 ### 3. FIMO based analysis
 `leukemia FIMO analysis.R` contains the codes for FIMO-based analysis.
