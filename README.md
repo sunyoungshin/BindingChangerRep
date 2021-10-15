@@ -53,7 +53,7 @@ The random sequence pairs are generated with R codes in `2.Alternative model inp
 
 
 ### 3. More background models
-The sequence pairs are generated with R codes in `4.More models input.R` and they are saved in `4.More models input.Rdata`.
+The sequence pairs are generated with R codes in `3.More models input.R` and they are saved in `3.More models input.Rdata`.
 
 `3.More models test & summary.R` produces Table D.4 & D.5.
 
