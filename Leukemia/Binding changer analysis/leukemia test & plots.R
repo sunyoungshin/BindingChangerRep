@@ -2,7 +2,7 @@
 library(data.table)
 #install.packages("devtools")
 library(devtools)
-install_github("sunyoungshin/BindingChanger")
+#install_github("sunyoungshin/atIndel")
 library(atIndel)
 #install.packages("ggplot2")
 library(ggplot2)
@@ -32,8 +32,13 @@ f2<-merge(f1,IDinfo,by="id")
 
 table1213<-f2[,c(15:17,1:14)]
 
+mmm<-Lek_result_10000[Lek_result_10000$motif=="MYC1",]
+m<-abs(nchar(mmm$ref)-nchar(mmm$alt))
+table(m)
+m2<-ifelse(m<=10&m>=6,"6-10",ifelse(m<=20&m>=11,"11-20",ifelse(m>=21,"21+",m)))
+table5<-table(m2)
 
-#######plot the results (Figure 6) 
+#######plot the results (Figure 7) 
 
 which(names(lek_seq_info)=="chr15:102265302:2:1") #1676
 atIndel::plot_indel_binding(lek_seq_info[1676],Lek_score$list,myMYC[1])
@@ -56,4 +61,4 @@ atIndel::plot_indel_binding(lek_seq_info[4161],Lek_score$list,myMYC[1])
 which(names(lek_seq_info)=="chr7:151860748:1:2") #4802
 atIndel::plot_indel_binding(lek_seq_info[4802],Lek_score$list,myMYC[1])
 
-save(table1213,file="leukemia output.Rdata")
+save(table1213,table5,file="leukemia output.Rdata")
